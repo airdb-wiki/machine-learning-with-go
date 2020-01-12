@@ -1,0 +1,75 @@
+{
+  "title": "airdb",
+  "description": "gitbook",
+  "language": "en-us",
+  "links": {
+      "sidebar": {
+          "Home": "https://airdb.wiki"
+      }
+  },
+  "plugins": [
+    "expandable-chapters",
+    "toggle-chapters",
+    "anchors",
+    "disqus",
+    "github",
+    "editlink",
+    "custom-favicon",
+    "prism", "-highlight",
+    "-lunr", "-search", "search-plus",
+    "codesnippet",
+    "splitter",
+    "page-toc-button",
+    "image-captions",
+    "page-footer-ex",
+    "tags",
+    "multipart"
+  ],
+  "pdf": {
+    "toc": true,
+    "pageNumbers": true,
+    "fontSize": 11
+  },
+  "pluginsConfig": {
+    "favicon": "favicon.ico",
+    "image-captions": {
+          "caption": "image - _CAPTION_"
+    },
+    "page-toc-button": {
+      "maxTocDepth": 2,
+      "minTocSize": 2
+   	},
+    "expandable-chapters":{
+    },
+    "disqus": {
+      "shortName": "airdb"
+    },
+    "github": {
+      "url": "https://github.com/airdb/gitbook"
+    },
+    "editlink": {
+      "base": "https://github.com/airdb/gitbook/blob/master/",
+      "label": "Edit This Page"
+    },
+    "page-footer-ex":{
+        "copyright":"Copyright © 2015-present airdb.",
+        "update_label":"LastUpdated: ",
+        "update_format":"YYYY-MM-DD HH:mm:ss"
+    },
+    "tags": {
+        "placement": "bottom"
+    },
+    "sharing": {
+        "facebook": true,
+        "twitter": true,
+        "google": true,
+        "weibo": true,
+        "instapaper": false,
+        "vk": false,
+        "all": [
+            "facebook", "google", "twitter",
+            "weibo", "instapaper"
+        ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+name: Node
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: npm install, build, and test
+      run: |
+        npm install -g gitbook-cli
+        gitbook install ./
+        gitbook build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        # PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GithubBotToken }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./_book
