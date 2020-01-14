@@ -160,6 +160,7 @@ a.SetRow(0, []float64{14.3, -4.2})
 
 // Modify an entire column.
 a.SetCol(0, []float64{1.7, -0.3})
+```
 
 
 
