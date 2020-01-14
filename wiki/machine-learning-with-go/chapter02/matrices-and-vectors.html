@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>概率和统计 · airdb</title>
+        <title>矩阵和向量 · airdb</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -97,7 +97,7 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../" />
+    <link rel="next" href="statistics.html" />
     
     
     <link rel="prev" href="./" />
@@ -212,7 +212,20 @@
                 <a href="matrices-and-vectors.html">
             
                     
-                    概率和统计
+                    矩阵和向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="statistics.html">
+            
+                <a href="statistics.html">
+            
+                    
+                    统计
             
                 </a>
             
@@ -397,7 +410,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >概率和统计</a>
+        <a href="../../.." >矩阵和向量</a>
     </h1>
 </div>
 
@@ -525,66 +538,64 @@ a.SetRow(0, []float64{14.3, -4.2})
 
 // Modify an entire column.
 a.SetCol(0, []float64{1.7, -0.3})
-
-
-
-## &#x77E9;&#x9635;&#x8FD0;&#x7B97;
-&#x4E0E;&#x5411;&#x91CF;&#x4E00;&#x6837;&#xFF0C;&#x77E9;&#x9635;&#x4E5F;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x7EC4;&#x7B97;&#x672F;&#x89C4;&#x5219;&#xFF0C;&#x4EE5;&#x53CA;&#x5168;&#x90E8;&#x7279;&#x6B8A;&#x64CD;&#x4F5C;&#x96C6;&#x3002; &#x4E0E;&#x77E9;&#x9635;&#x76F8;&#x5173;&#x7684;&#x67D0;&#x4E9B;&#x7B97;&#x6CD5;&#x7684;&#x884C;&#x4E3A;&#x4E0E;&#x60A8;&#x671F;&#x671B;&#x7684;&#x7C7B;&#x4F3C;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x5728;&#x505A;&#x8BF8;&#x5982;&#x5C06;&#x77E9;&#x9635;&#x76F8;&#x4E58;&#x6216;&#x6C42;&#x9006;&#x4E4B;&#x7C7B;&#x7684;&#x4E8B;&#x60C5;&#x65F6;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x7279;&#x522B;&#x5C0F;&#x5FC3;&#x3002;
-
-
-
-&#x65B9;&#x4FBF;&#x5730;&#xFF0C;gonum.org/v1/gonum/mat&#x4E3A;&#x6B64;&#x7B97;&#x6CD5;&#x548C;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x7279;&#x6B8A;&#x64CD;&#x4F5C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;API&#x3002; &#x8FD9;&#x662F;&#x663E;&#x793A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x793A;&#x4F8B;&#xFF0C;&#x4F8B;&#x5982;&#x52A0;&#xFF0C;&#x4E58;&#xFF0C;&#x9664;&#x7B49;:
-</code></pre><p>// Create two matrices of the same size, a and b.
+</code></pre><h2 id="&#x77E9;&#x9635;&#x8FD0;&#x7B97;"><a name="&#x77E9;&#x9635;&#x8FD0;&#x7B97;" class="plugin-anchor" href="#&#x77E9;&#x9635;&#x8FD0;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x77E9;&#x9635;&#x8FD0;&#x7B97;</h2>
+<p>&#x4E0E;&#x5411;&#x91CF;&#x4E00;&#x6837;&#xFF0C;&#x77E9;&#x9635;&#x4E5F;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x7EC4;&#x7B97;&#x672F;&#x89C4;&#x5219;&#xFF0C;&#x4EE5;&#x53CA;&#x5168;&#x90E8;&#x7279;&#x6B8A;&#x64CD;&#x4F5C;&#x96C6;&#x3002; &#x4E0E;&#x77E9;&#x9635;&#x76F8;&#x5173;&#x7684;&#x67D0;&#x4E9B;&#x7B97;&#x6CD5;&#x7684;&#x884C;&#x4E3A;&#x4E0E;&#x60A8;&#x671F;&#x671B;&#x7684;&#x7C7B;&#x4F3C;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x5728;&#x505A;&#x8BF8;&#x5982;&#x5C06;&#x77E9;&#x9635;&#x76F8;&#x4E58;&#x6216;&#x6C42;&#x9006;&#x4E4B;&#x7C7B;&#x7684;&#x4E8B;&#x60C5;&#x65F6;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x7279;&#x522B;&#x5C0F;&#x5FC3;&#x3002;</p>
+<p>&#x65B9;&#x4FBF;&#x5730;&#xFF0C;gonum.org/v1/gonum/mat&#x4E3A;&#x6B64;&#x7B97;&#x6CD5;&#x548C;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x7279;&#x6B8A;&#x64CD;&#x4F5C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;API&#x3002; &#x8FD9;&#x662F;&#x663E;&#x793A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x793A;&#x4F8B;&#xFF0C;&#x4F8B;&#x5982;&#x52A0;&#xFF0C;&#x4E58;&#xFF0C;&#x9664;&#x7B49;:</p>
+<pre class="language-"><code>// Create two matrices of the same size, a and b.
 a := mat.NewDense(3, 3, []float64{1, 2, 3, 0, 4, 5, 0, 0, 6})
-b := mat.NewDense(3, 3, []float64{8, 9, 10, 1, 4, 2, 9, 0, 2})</p>
-<p>// Create a third matrix of a different size.
-c := mat.NewDense(3, 2, []float64{3, 2, 1, 4, 0, 8})</p>
-<p>// Add a and b.
+b := mat.NewDense(3, 3, []float64{8, 9, 10, 1, 4, 2, 9, 0, 2})
+
+// Create a third matrix of a different size.
+c := mat.NewDense(3, 2, []float64{3, 2, 1, 4, 0, 8})
+
+// Add a and b.
 d := mat.NewDense(0, 0, nil)
 d.Add(a, b)
 fd := mat.Formatted(d, mat.Prefix(&quot;            &quot;))
-fmt.Printf(&quot;d = a + b = %0.4v\n\n&quot;, fd)</p>
-<p>// Multiply a and c.
+fmt.Printf(&quot;d = a + b = %0.4v\n\n&quot;, fd)
+
+// Multiply a and c.
 f := mat.NewDense(0, 0, nil)
 f.Mul(a, c)
 ff := mat.Formatted(f, mat.Prefix(&quot;          &quot;))
-fmt.Printf(&quot;f = a c = %0.4v\n\n&quot;, ff)</p>
-<p>// Raising a matrix to a power.
+fmt.Printf(&quot;f = a c = %0.4v\n\n&quot;, ff)
+
+// Raising a matrix to a power.
 g := mat.NewDense(0, 0, nil)
 g.Pow(a, 5)
 fg := mat.Formatted(g, mat.Prefix(&quot;          &quot;))
-fmt.Printf(&quot;g = a^5 = %0.4v\n\n&quot;, fg)</p>
-<p>// Apply a function to each of the elements of a.
+fmt.Printf(&quot;g = a^5 = %0.4v\n\n&quot;, fg)
+
+// Apply a function to each of the elements of a.
 h := mat.NewDense(0, 0, nil)
-sqrt := func(<em>, </em> int, v float64) float64 { return math.Sqrt(v) }
+sqrt := func(_, _ int, v float64) float64 { return math.Sqrt(v) }
 h.Apply(sqrt, a)
 fh := mat.Formatted(h, mat.Prefix(&quot;              &quot;))
-fmt.Printf(&quot;h = sqrt(a) = %0.4v\n\n&quot;, fh)</p>
-<pre class="language-"><code>
+fmt.Printf(&quot;h = sqrt(a) = %0.4v\n\n&quot;, fh)
+</code></pre><p>&#x7279;&#x522B;&#x8981;&#x6CE8;&#x610F;&#x4E0A;&#x9762;&#x7684;Apply&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x3002; &#x6B64;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5141;&#x8BB8;&#x60A8;&#x5C06;&#x4EFB;&#x4F55;&#x529F;&#x80FD;&#x5E94;&#x7528;&#x4E8E;&#x77E9;&#x9635;&#x7684;&#x5143;&#x7D20;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x5E94;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E;&#x77E9;&#x9635;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x9010;&#x4E2A;&#x5143;&#x7D20;
+&#x4E58;&#x6CD5;&#xFF0C;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x529F;&#x80FD;&#x7684;&#x5E94;&#x7528;&#x6216;&#x7B2C;&#x4E09;&#x65B9;&#x7A0B;&#x5E8F;&#x5305;&#x4E2D;&#x7684;&#x529F;&#x80FD;&#x7684;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x4E8B;&#x7269;&#xFF0C;&#x4F8B;&#x5982;&#x884C;&#x5217;&#x5F0F;&#xFF0C;&#x7279;&#x5F81;&#x503C;/&#x5411;&#x91CF;&#x89E3;&#x7B97;&#x5668;&#x548C;&#x9006;&#x51FD;&#x6570;&#xFF0C;gonum.org / v1 / gonum / mathas&#x90FD;&#x5DF2;&#x4ECB;&#x7ECD;&#x3002; &#x540C;&#x6837;&#xFF0C;&#x6211;&#x4E0D;&#x4F1A;&#x6269;&#x5C55;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>// Create a new matrix a.
+a := mat.NewDense(3, 3, []float64{1, 2, 3, 0, 4, 5, 0, 0, 6}) 
 
-&#x7279;&#x522B;&#x8981;&#x6CE8;&#x610F;&#x4E0A;&#x9762;&#x7684;Apply&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x3002; &#x6B64;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5141;&#x8BB8;&#x60A8;&#x5C06;&#x4EFB;&#x4F55;&#x529F;&#x80FD;&#x5E94;&#x7528;&#x4E8E;&#x77E9;&#x9635;&#x7684;&#x5143;&#x7D20;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x5E94;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x51FD;&#x6570;&#x4F9D;&#x8D56;&#x4E8E;&#x77E9;&#x9635;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x9010;&#x4E2A;&#x5143;&#x7D20;
-&#x4E58;&#x6CD5;&#xFF0C;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x529F;&#x80FD;&#x7684;&#x5E94;&#x7528;&#x6216;&#x7B2C;&#x4E09;&#x65B9;&#x7A0B;&#x5E8F;&#x5305;&#x4E2D;&#x7684;&#x529F;&#x80FD;&#x7684;&#x5E94;&#x7528;&#x3002;
-
-
-&#x7136;&#x540E;&#xFF0C;&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x4E8B;&#x7269;&#xFF0C;&#x4F8B;&#x5982;&#x884C;&#x5217;&#x5F0F;&#xFF0C;&#x7279;&#x5F81;&#x503C;/&#x5411;&#x91CF;&#x89E3;&#x7B97;&#x5668;&#x548C;&#x9006;&#x51FD;&#x6570;&#xFF0C;gonum.org / v1 / gonum / mathas&#x90FD;&#x5DF2;&#x4ECB;&#x7ECD;&#x3002; &#x540C;&#x6837;&#xFF0C;&#x6211;&#x4E0D;&#x4F1A;&#x6269;&#x5C55;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x793A;&#x4F8B;&#xFF1A;
-</code></pre><p>// Create a new matrix a.
-a := mat.NewDense(3, 3, []float64{1, 2, 3, 0, 4, 5, 0, 0, 6}) </p>
-<p>// Compute and output the transpose of the matrix.
+// Compute and output the transpose of the matrix.
 ft := mat.Formatted(a.T(), mat.Prefix(&quot; &quot;))
-fmt.Printf(&quot;a^T = %v\n\n&quot;, ft)</p>
-<p>// Compute and output the determinant of a.
+fmt.Printf(&quot;a^T = %v\n\n&quot;, ft)
+
+// Compute and output the determinant of a.
 deta := mat.Det(a)
-fmt.Printf(&quot;det(a) = %.2f\n\n&quot;, deta)</p>
-<p>// Compute and output the inverse of a.
+fmt.Printf(&quot;det(a) = %.2f\n\n&quot;, deta)
+
+// Compute and output the inverse of a.
 aInverse := mat.NewDense(0, 0, nil)
 if err := aInverse.Inverse(a); err != nil {
     log.Fatal(err)
-}</p>
-<p>fi := mat.Formatted(aInverse, mat.Prefix(&quot; &quot;))
+}
+
+fi := mat.Formatted(aInverse, mat.Prefix(&quot; &quot;))
 fmt.Printf(&quot;a^-1 = %v\n\n&quot;, fi)
-```</p>
-<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x6B64;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x4FDD;&#x4FDD;&#x6301;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x53EF;&#x8BFB;&#x6027;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528;Go&#x7684;&#x663E;&#x5F0F;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x529F;&#x80FD;&#x3002; &#x77E9;&#x9635;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x6709;&#x9006;&#x7684;&#x3002; &#x5904;&#x7406;&#x77E9;&#x9635;&#x548C;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x5404;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x786E;&#x4FDD;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7B26;&#x5408;&#x9884;&#x671F;&#x3002;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; 2015-present airdb. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> LastUpdated:  2020-01-14 15:08:05 </span> </footer>
+</code></pre><p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x6B64;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x4FDD;&#x4FDD;&#x6301;&#x5B8C;&#x6574;&#x6027;&#x548C;&#x53EF;&#x8BFB;&#x6027;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528;Go&#x7684;&#x663E;&#x5F0F;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x529F;&#x80FD;&#x3002; &#x77E9;&#x9635;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x6709;&#x9006;&#x7684;&#x3002; &#x5904;&#x7406;&#x77E9;&#x9635;&#x548C;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x5404;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x786E;&#x4FDD;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7B26;&#x5408;&#x9884;&#x671F;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; 2015-present airdb. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> LastUpdated:  2020-01-14 16:07:48 </span> </footer>
 
                                 
                                 </section>
@@ -617,7 +628,7 @@ fmt.Printf(&quot;a^-1 = %v\n\n&quot;, fi)
                 </a>
                 
                 
-                <a href="../" class="navigation navigation-next " aria-label="Next page: Chapter 03 - 评估与验证">
+                <a href="statistics.html" class="navigation navigation-next " aria-label="Next page: 统计">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -628,7 +639,7 @@ fmt.Printf(&quot;a^-1 = %v\n\n&quot;, fi)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"概率和统计","level":"1.1.4.1","depth":3,"next":{"title":"Chapter 03 - 评估与验证","level":"1.1.5","depth":2,"path":"wiki/machine-learning-with-go/README.md","ref":"wiki/machine-learning-with-go/README.md","articles":[]},"previous":{"title":"Chapter 02 - 矩阵，概率和统计","level":"1.1.4","depth":2,"path":"wiki/machine-learning-with-go/chapter02/README.md","ref":"wiki/machine-learning-with-go/chapter02/README.md","articles":[{"title":"概率和统计","level":"1.1.4.1","depth":3,"path":"wiki/machine-learning-with-go/chapter02/matrices-and-vectors.md","ref":"wiki/machine-learning-with-go/chapter02/matrices-and-vectors.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","toggle-chapters","mathjax","anchors","disqus","github","editlink","custom-favicon","prism","-highlight","-lunr","-search","search-plus","codesnippet","splitter","page-toc-button","image-captions","page-footer-ex","tags","multipart"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"disqus":{"useIdentifier":false,"shortName":"airdb"},"github":{"url":"https://github.com/airdb/gitbook"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/airdb/gitbook/blob/master/"},"page-footer-ex":{"copyright":"Copyright © 2015-present airdb.","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"LastUpdated: "},"splitter":{},"multipart":{},"codesnippet":{},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"favicon.ico","page-toc-button":{"maxTocDepth":2,"minTocSize":2},"custom-favicon":{},"tags":{"placement":"bottom"},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"image - _CAPTION_","variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"airdb","language":"en-us","links":{"sidebar":{"Home":"https://airdb.wiki"}},"gitbook":"*","description":"gitbook"},"file":{"path":"wiki/machine-learning-with-go/chapter02/matrices-and-vectors.md","mtime":"2020-01-14T15:08:05.969Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-14T15:09:33.630Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"矩阵和向量","level":"1.1.4.1","depth":3,"next":{"title":"统计","level":"1.1.4.2","depth":3,"path":"wiki/machine-learning-with-go/chapter02/statistics.md","ref":"wiki/machine-learning-with-go/chapter02/statistics.md","articles":[]},"previous":{"title":"Chapter 02 - 矩阵，概率和统计","level":"1.1.4","depth":2,"path":"wiki/machine-learning-with-go/chapter02/README.md","ref":"wiki/machine-learning-with-go/chapter02/README.md","articles":[{"title":"矩阵和向量","level":"1.1.4.1","depth":3,"path":"wiki/machine-learning-with-go/chapter02/matrices-and-vectors.md","ref":"wiki/machine-learning-with-go/chapter02/matrices-and-vectors.md","articles":[]},{"title":"统计","level":"1.1.4.2","depth":3,"path":"wiki/machine-learning-with-go/chapter02/statistics.md","ref":"wiki/machine-learning-with-go/chapter02/statistics.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","toggle-chapters","mathjax","anchors","disqus","github","editlink","custom-favicon","prism","-highlight","-lunr","-search","search-plus","codesnippet","splitter","page-toc-button","image-captions","page-footer-ex","tags","multipart"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"disqus":{"useIdentifier":false,"shortName":"airdb"},"github":{"url":"https://github.com/airdb/gitbook"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/airdb/gitbook/blob/master/"},"page-footer-ex":{"copyright":"Copyright © 2015-present airdb.","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"LastUpdated: "},"splitter":{},"multipart":{},"codesnippet":{},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"favicon.ico","page-toc-button":{"maxTocDepth":2,"minTocSize":2},"custom-favicon":{},"tags":{"placement":"bottom"},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"image - _CAPTION_","variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"wiki/machine-learning-with-go/chapter02/statistics.html#fig1.1.4.2.1","level":"1.1.4.2","list_caption":"Figure: distributions","alt":"distributions","nro":1,"url":"../images/chapter02-statistics.jpg","index":1,"caption_template":"image - _CAPTION_","label":"distributions","attributes":{},"skip":false,"key":"1.1.4.2.1"},{"backlink":"wiki/machine-learning-with-go/chapter02/statistics.html#fig1.1.4.2.2","level":"1.1.4.2","list_caption":"Figure: 1","alt":"1","nro":2,"url":"../images/chapter02-histograms.jpg","index":2,"caption_template":"image - _CAPTION_","label":"1","attributes":{},"skip":false,"key":"1.1.4.2.2"},{"backlink":"wiki/machine-learning-with-go/chapter02/statistics.html#fig1.1.4.2.3","level":"1.1.4.2","list_caption":"Figure: 2","alt":"2","nro":3,"url":"../images/chapter02-histograms2.jpg","index":3,"caption_template":"image - _CAPTION_","label":"2","attributes":{},"skip":false,"key":"1.1.4.2.3"},{"backlink":"wiki/machine-learning-with-go/chapter02/statistics.html#fig1.1.4.2.4","level":"1.1.4.2","list_caption":"Figure: 4","alt":"4","nro":4,"url":"../images/chapter02-histograms4.jpg","index":4,"caption_template":"image - _CAPTION_","label":"4","attributes":{},"skip":false,"key":"1.1.4.2.4"}]},"title":"airdb","language":"en-us","links":{"sidebar":{"Home":"https://airdb.wiki"}},"gitbook":"*","description":"gitbook"},"file":{"path":"wiki/machine-learning-with-go/chapter02/matrices-and-vectors.md","mtime":"2020-01-14T16:07:48.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-14T16:09:11.401Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
