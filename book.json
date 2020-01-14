@@ -10,6 +10,7 @@
   "plugins": [
     "expandable-chapters",
     "toggle-chapters",
+    "mathjax",
     "anchors",
     "disqus",
     "github",

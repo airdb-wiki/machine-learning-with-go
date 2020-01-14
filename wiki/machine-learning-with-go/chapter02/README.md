@@ -1,7 +1,7 @@
+矩阵，概率和统计
 Matrices, Probability, and Statistics
 [Page 71-105, 34]
 
-Although we will take a mostly practical/applied approach to machine learningthroughout this book, certain fundamental topics are essential to understand andproperly apply machine learning. In particular, a fundamental understanding ofprobability and statistics will allow us to match certain algorithms with relevantproblems, understand our data and results, and apply necessary transformations toour data. Matrices and a little linear algebra will then allow us to properly representour data and implement optimizations, minimizations, and matrix-basedtransformations.
+尽管在本书中我们将采用一种最实用/应用的方法进行机器学习，但是某些基本主题对于理解和正确地应用机器学习至关重要。特别是，对概率和统计量的基本了解将使我们能够将某些算法与相关问题进行匹配，了解我们的数据和结果，并对数据进行必要的转换。然后，矩阵和一些线性代数将使我们能够正确地表示我们的数据，并实现优化，最小化和基于矩阵的变换。
 
-Do not worry too much if you are a little rusty in math or statistics. We will cover afew of the basics here and show you how to programmatically work with the relevantstatistical measures and matrix techniques that will be utilized later in the book. Thatbeing said, this is not a book on statistics, probability, and linear algebra. To truly beproficient in machine learning, one should take time to learn these subjects on adeeper level.
-
+如果您对数学或统计数据有些生疏，请不要担心太多。我们将在这里介绍一些基础知识，并向您展示如何以编程方式使用相关的统计量度和矩阵技术，这些将在本书的后面部分进行介绍。话虽如此，这不是一本有关统计，概率和线性代数的书。为了真正精通机器学习，应该花一些时间在更深的层次上学习这些主题。
